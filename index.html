@@ -31,6 +31,8 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/c11c744571.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+
 </head>
 
 <body>
@@ -81,78 +83,59 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
-
-      <li class="nav-item">
-        <a class="nav-link " href="index.html">
-          <i class="fa-solid fa-chart-line"></i>
-          <span>Dashboard</span>
-        </a>
-      </li>
-
       <li class="nav-heading">SECTIONS</li>
 
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="#section-1">
           <span>1. Target Marketing to Vietnamese locals</span>
         </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
-          <span>2. Focus marketing on Asian-based soup flavours</span>
+        <a class="nav-link " href="#section-1">
+          <span>2. Introduce exclusive Vietnamese soup flavours</span>
         </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
-          <span>3. Introduce exclusive Vietnamese soup flavours</span>
+        <a class="nav-link" href="#section-2">
+          <span>3. Focus marketing on Asian-based soup flavours</span>
         </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="#section-3">
           <span>4. Introduce Take-Home Soup Packs product line</span>
         </a>
       </li>
-
-
-
-
-      <li class="nav-heading">FILES</li>
-
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="/file">
-          <i class="bi bi-file-earmark"></i>
-          <span>Executive Summary</span>
-        </a>
-      </li><!-- End Blank Page Nav -->
-
     </ul>
 
   </aside><!-- End Sidebar-->
 
   <main id="main" class="main">
 
+    <section class="section dashboard" id="section-1">
+      <br><br><br>
     <div class="pagetitle">
-      <h1>1. Target Marketing to Vietnamese Locals</h1>
+      <h1>1. Target Marketing to Vietnamese Locals <br> + 2. Introduce exclusive Vietnamese soup flavours</h1>
     </div>
-
-    <section class="section dashboard">
+    
       <div class="row">
         <div class="col-md-6">
           <div class="card info-card sales-card">
             <div class="card-body">
               <h5 class="card-title">Why?</h5>
               <div class="d-flex align-items-center">
-                <div class="ps-3">
+                <div class="ps-3 text">
                   Soup dishes are are already a beloved staple in Vietnamese cuisine.<br><br>
-                  Based on a <a class="link-success text-success fw-bold" 
-                  href="https://qandme.net/en/report/The-richness-and-diversity-of-Vietnamese-traditional-food.html">survey</a>
-                  of Vietnamese locals from the North, Central and South regions,
-                  <span class="text-primary fw-bold">
-                    <span id="soups">0</span> out of <span id="alldishes">0</span>
+                  Based on a survey of Vietnamese locals from the North, Central and South regions,
+                  <span class="text-primary fw-bold"><span id="soups">0</span> out of <span id="alldishes">0</span>
                   </span> of the most popular Vietnamese dishes are soup-based, followed by rice dishes (6).
+                  <br><br>
+                  It would therefore be relatively easy for Soup Spoon to introduce their business model to Vietnam.
+                  <div style="padding-bottom: 18px;"></div>
+                  <a href="https://qandme.net/en/report/The-richness-and-diversity-of-Vietnamese-traditional-food.html"
+                    class="sourced">Data source: QandMe</a>
                 </div>
               </div>
             </div>
@@ -162,25 +145,47 @@
         <div class="col-md-6">
           <div class="card info-card sales-card">
             <div class="card-body">
-              <h5 class="card-title">Soup Dishes: </h5>
+              <h5 class="card-title">Most Popular Vietnamese Dishes: </h5>
               <div class="d-flex ps-3">
                 <div class="col">
                   <ul>
-                    <li> Phở</li>
-                    <li>Bánh canh cua</li>
-                    <li>Bún bò</li>
-                    <li>Bún riêu</li>
-                    <li>Bún mắm</li>
-                    <li>Mì Quảng</li>
+                    <li class="text-primary fw-bold"> Phở</li>
+                    <li class="text">Bánh cuốn</li>
+                    <li class="text">Bánh gai</li>
+                    <li class="text">Bánh đa</li>
+                    <li class="text">Bún chả</li>
+                    <li class="text">Kẹo lạc</li>
+                    <li class="text">Bánh lọc</li>
+                    <li class="text">Cao lầu</li>
+                    <li class="text">Nhựt Thanh</li>
                   </ul>
                 </div>
 
                 <div class="col">
                   <ul>
-                    <li>Cháo lươn</li>
-                    <li>Canh chua cá lóc</li>
-                    <li>Hủ tiếu nam vang</li>
-                    </ul>
+                    <li class="text">Bánh cay</li>
+                    <li class="text">Bánh cốm</li>
+                    <li class="text">Nem rán</li>
+                    <li class="text">Bánh xèo</li>
+                    <li class="text-primary fw-bold">Mì Quảng</li>
+                    <li class="text-primary fw-bold">Bánh canh cua</li>
+                    <li class="text-primary fw-bold">Hủ tiếu nam vang</li>
+                    <li class="text">Cơm tấm</li>
+                  </ul>
+                </div>
+
+                <div class="col">
+                  <ul>
+                    <li class="text-primary fw-bold">Bún bò</li>
+                    <li class="text">Bánh bèo</li>
+                    <li class="text-primary fw-bold">Cháo lươn</li>
+                    <li class="text">Cơm hến</li>
+                    <li class="text">Tương Nam Đàn</li>
+                    <li class="text">Bánh mì</li>
+                    <li class="text-primary fw-bold">Bún riêu</li>
+                    <li class="text-primary fw-bold">Bún mắm</li>
+                    <li class="text-primary fw-bold">Canh chua cá lóc</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -209,18 +214,18 @@
                 misc = ['Bánh mì', 'Bún chả', 'Nem rán', 'Cơm tấm', 'Cao lầu']
 
                 const seriesLabel = {
-  show: true,
-  fontSize:15,
-  formatter: function(d) {
-        return d.name + ': ' + d.percent + '%';
-      }
-};
+                  show: true,
+                  fontSize: 15,
+                  formatter: function (d) {
+                    return d.name + ': ' + d.percent + '%';
+                  }
+                };
 
                 const total_dishes = soups.length + desserts.length + rice.length + misc.length;
 
                 document.getElementById("alldishes").innerHTML = total_dishes;
                 document.getElementById("soups").innerHTML = soups.length;
-    
+
                 document.addEventListener("DOMContentLoaded", () => {
                   echarts.init(document.querySelector("#dishes_pie")).setOption({
 
@@ -270,7 +275,451 @@
                       enabled: true,
                       divideShape: 'clone'
                     }
-                  });});
+                  });
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dashboard" id="section-2">
+      <br><br><br>
+    <div class="pagetitle">
+      <h1>2. Focus marketing on Asian-based soup flavours</h1>
+    </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card info-card sales-card">
+            <div class="card-body">
+              <h5 class="card-title">Why?</h5>
+              <div class="d-flex align-items-center">
+                <div class="ps-3 text">
+                  The average spending per head per visit on non-Vietnamese cuisines lean heavily towards Asian
+                  cuisines.
+                  The data has been divided into 3 categories:
+                  <br><br>
+                  <ul>
+                    <li class="text-primary fw-bold">Asian (655 VND)</li>
+                    <li>Western / European (419 VND)</li>
+                    <li>Undetermined* (601 VND)</li>
+                  </ul>
+                  Asian-based soup flavours may be more likely to sell among the locals.
+                  <div style="padding-bottom: 18px;"></div>
+                  <a href="https://www-statista-com.libproxy.smu.edu.sg/statistics/1019608/vietnam-consumer-spending-on-non-vietnamese-cuisine-by-type/?locale=en"
+                    class="sourced">Data source: Statista</a><br>
+                  <span style="font-size: x-small;">*cuisines that don't indicate a region of origin</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card info-card sales-card">
+            <div class="card-body">
+              <h5 class="card-title">Popular Non-Vietnamese <br> Cuisine in Vietnam:</h5>
+              <div class="d-flex ps-3">
+                <ol>
+                  <li class="text">Japanese</li>
+                  <li class="text">BBQ</li>
+                  <li class="text">Hotpot</li>
+                  <li class="text">Italian</li>
+                  <li class="text">Western</li>
+                  <li class="text">Korean</li>
+                  <li class="text">Other Asian</li>
+                  <li class="text">Fast Food</li>
+                </ol>
+              </div>
+              <div style="padding:10px"></div>
+              <span style="font-size: x-small;">(ranking is based on average spending by locals)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Average Spending (in 1K Vietnam Dong) on non-Vietnamese cuisine</h5>
+              <span>The 3 categories can drill-down to further sub-categories.</span>
+              <div id="asian_flavours" style="min-height: 400px;" class="echart"></div>
+
+              <script type="text/javascript">
+                var dom = document.getElementById('asian_flavours');
+                var myChart = echarts.init(dom, null, {
+                  renderer: 'canvas',
+                  useDirtyRect: false
+                });
+                var app = {};
+
+                var option;
+
+                option = {
+                  xAxis: {
+                    data: ['Asian', 'Western / European', 'Undetermined']
+                  },
+                  yAxis: {},
+                  label: {
+                    show: true,
+                    position: 'inside',
+                    fontSize: 15,
+                    fontWeight: 700,
+                    color: 'white',
+                    formatter: function (d) {
+                      return d.value;
+                    }
+                  },
+                  dataGroupId: '',
+                  animationDurationUpdate: 500,
+                  series: {
+                    type: 'bar',
+
+                    id: 'cuisines',
+                    data: [
+                      {
+                        value: 280 + 191 + 184,
+                        groupId: 'asian',
+                        itemStyle: {
+                          color: '#91cc75'
+                        }
+                      },
+                      {
+                        value: 210 + 209,
+                        groupId: 'western',
+                        itemStyle: {
+                          color: '#e990c5'
+                        }
+                      },
+                      {
+                        value: 271 + 225 + 105,
+                        groupId: 'idk',
+                        itemStyle: {
+                          color: '#f2d4a2'
+                        }
+                      }
+                    ],
+                    universalTransition: {
+                      enabled: true,
+                      divideShape: 'clone'
+                    }
+                  }
+                };
+
+                const drilldownData = [
+                  {
+                    dataGroupId: 'asian',
+                    data: [
+                      ['Japanese', 280],
+                      ['Korean', 191],
+                      ['Other Asian', 184]
+                    ]
+                  },
+                  {
+                    dataGroupId: 'western',
+                    data: [
+                      ['Italian', 210],
+                      ['Western', 209]
+                    ]
+                  },
+                  {
+                    dataGroupId: 'idk',
+                    data: [
+                      ['BBQ', 271],
+                      ['Hotpot', 225],
+                      ['Fast Food', 105]
+                    ],
+                  }
+                ];
+
+                myChart.on('click', function (event) {
+                  if (event.data) {
+                    var subData = drilldownData.find(function (data) {
+                      return data.dataGroupId === event.data.groupId;
+                    });
+                    if (!subData) {
+                      return;
+                    }
+                    myChart.setOption({
+                      xAxis: {
+                        data: subData.data.map(function (item) {
+                          return item[0];
+                        })
+                      },
+                      series: {
+                        type: 'bar',
+                        id: 'cuisines',
+                        dataGroupId: subData.dataGroupId,
+                        data: subData.data.map(function (item) {
+                          return item[1];
+                        }),
+                        universalTransition: {
+                          enabled: true,
+                          divideShape: 'clone'
+                        }
+                      },
+                      graphic: [
+                        {
+                          type: 'text',
+                          left: 50,
+                          top: 20,
+                          style: {
+                            text: 'Return',
+                            fontSize: 18
+                          },
+                          onclick: function () {
+                            myChart.setOption(option);
+                          }
+                        }
+                      ]
+                    });
+                  }
+                });
+                if (option && typeof option === 'object') {
+                  myChart.setOption(option);
+                }
+                window.addEventListener('resize', myChart.resize);
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section dashboard" id="section-3">
+      <br><br><br>
+    <div class="pagetitle">
+      <h1>4. Introduce Take-Home Soup Packs product line</h1>
+    </div>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="card info-card sales-card">
+            <div class="card-body">
+              <h5 class="card-title">Why?</h5>
+              <div class="d-flex align-items-center">
+                <div class="ps-3 text">
+                  There is a significant preference for <span class="text-primary fw-bold">single-pack food packaging
+                    (61%)</span> as compared to <span class="text-danger fw-bold">multi-pack packaging (39%)</span>
+                  among Vietnamese locals.
+                  <br><br> Several brands in rural and urban Vietnam are instant packet brands, and they have a <span
+                    class="text-primary fw-bold">high penetration rate</span> among locals. This means there is a demand for  instant / quick meals, and the take-home packs can meet this demand.
+                  <div style="padding-bottom: 18px;"></div>
+                  <a href="https://www-statista-com.libproxy.smu.edu.sg/statistics/1350970/vietnam-food-packaging-preference/"
+                    class="sourced">Data source: Statista</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <div class="card info-card sales-card">
+            <div class="card-body">
+              <h5 class="card-title">Most Chosen FMCG Instant Noodle Brands in Vietnam:</h5>
+              <div class="d-flex ps-3">
+                <Ul>
+                  <li class="text">Hao Hao: 60.9% (rural), 80.6% (urban)</li>
+                  <li class="text">3 Mien: 63% (rural)</li>
+                  <li class="text">Kokomi: 58.1% (rural)</li>
+                  <li class="text">Gau Do: 53.6% (rural)</li>
+                </ul>
+              </div>
+              <a href="https://www-statista-com.libproxy.smu.edu.sg/statistics/1014925/vietnam-most-chosen-fmcg-brands-rural-areas-penetration-rate/"
+                class="sourced">Data source 1: Statista</a> |
+              <a href="https://www-statista-com.libproxy.smu.edu.sg/statistics/1014912/vietnam-most-chosen-fmcg-brands-urban-areas-penetration-rate/"
+                class="sourced">Data source 2: Statista</a><br>
+              <div style="padding-bottom: 25px;"></div>
+
+              <span style="font-size: small;">based on penetration rates(%) in urban/rural regions</span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 id="testt" class="card-title">Vietnamese locals' preference over single vs multi food packaging</h5>
+              <span></span>
+              <div id="sm_pie" style="min-height: 400px;" class="echart"></div>
+
+              <script type="text/javascript">
+
+                const pkgLabel = {
+                  show: true,
+                  fontSize: 12,
+                  formatter: function (d) {
+                    return d.name + ': \n' + d.percent + '%';
+                  }
+                };
+
+                document.addEventListener("DOMContentLoaded", () => {
+                  echarts.init(document.querySelector("#sm_pie")).setOption({
+
+                    tooltip: {
+                      trigger: 'item'
+                    },
+                    legend: {
+                      top: '0%',
+                      left: 'center'
+                    },
+                    dataGroupId: '',
+                    animationDurationUpdate: 100,
+                    series: [
+                      {
+                        // name: 'Popular Vietnamese Dishes',
+                        type: 'pie',
+                        id: 'prefs',
+                        selectedMode: 'single',
+                        avoidLabelOverlap: true,
+                        label: pkgLabel,
+                        data: [
+                          {
+                            name: 'Single-Packaging',
+                            value: 61,
+                            selected: true
+                          },
+                          {
+                            name: 'Multi-packaging',
+                            value: 39,
+                          }
+                        ]
+                      }
+                    ],
+                    universalTransition: {
+                      enabled: true,
+                      divideShape: 'clone'
+                    }
+                  });
+                });
+
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Most Popular FMCG brands in Rural Vietnam</h5>
+              <span class="text-center">
+                <p class="small"> <a class="btn btn-light" style="background-color: #DE3163; padding: 7px;"></a> Instant
+                  Noodle brands</p>
+              </span>
+              <div id="rural" style="min-height: 400px;" class="echart"></div>
+              <script type="text/javascript">
+
+                document.addEventListener("DOMContentLoaded", () => {
+                  echarts.init(document.querySelector("#rural")).setOption({
+
+                    xAxis: {},
+                    yAxis: {
+                      data: ['Fami', 'Gau Do', 'Kokomi', 'Hao Hao',
+                        '3 Mien', 'Ajinomoto', 'Vinamilk',
+                        'Chin Su', 'Nam Ngu', 'P/S']
+                    },
+                    label: {
+                      show: true,
+                      position: 'inside',
+                      color: 'white',
+                      formatter: function (d) {
+                        return d.value + ' %';
+                      }
+                    },
+                    dataGroupId: '',
+                    animationDurationUpdate: 500,
+                    series: {
+                      type: 'bar',
+                      id: 'rural',
+                      data: [
+                        { value: 46.4 },
+                        { value: 53.6, itemStyle: { color: '#DE3163' } },
+                        { value: 58.1, itemStyle: { color: '#DE3163' } },
+                        { value: 60.9, itemStyle: { color: '#DE3163' } },
+                        { value: 63.0, itemStyle: { color: '#DE3163' } },
+                        { value: 65.3 },
+                        { value: 70.7 },
+                        { value: 75.9 },
+                        { value: 78.8 },
+                        { value: 83.0 },
+
+                      ],
+                      universalTransition: {
+                        enabled: true,
+                        divideShape: 'clone'
+                      }
+                    }
+                  });
+                });
+
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- --------------------- -->
+
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Most Popular FMCG brands in Rural Vietnam</h5>
+              <span class="text-center">
+                <p class="small"> <a class="btn btn-light" style="background-color: #DE3163; padding: 7px;"></a> Instant
+                  Noodle brands</p>
+              </span>
+              <div id="urban" style="min-height: 400px;" class="echart"></div>
+              <script type="text/javascript">
+
+                document.addEventListener("DOMContentLoaded", () => {
+                  echarts.init(document.querySelector("#urban")).setOption({
+
+                     xAxis: {},
+                    yAxis: {
+                      data: ['Milo', 'Ngoi Sau Phuong Nam', 'TH True',
+                        'Coca Cola', 'Chin Su', 'Nam Ngu',
+                        'Sunlight', 'Ajinomoto','Hao Hao', 'Vinamilk']
+                    },
+                    label: {
+                      show: true,
+                      position: 'inside',
+                      color: 'white',
+                      formatter: function (d) {
+                        return d.value + ' %';
+                      }
+                    },
+                    dataGroupId: '',
+                    animationDurationUpdate: 500,
+                    series: {
+                      type: 'bar',
+                      id: 'rural',
+                      data: [
+                        { value: 50.6 },
+                        { value: 53.0 },
+                        { value: 57.4},
+                        { value: 65.9},
+                        { value: 67.6},
+                        { value: 72.3 },
+                        { value: 72.9 },
+                        { value: 75.7 },
+                        { value: 80.6, itemStyle: { color: '#DE3163' }  },
+                        { value: 92.1 },
+
+                      ],
+                      universalTransition: {
+                        enabled: true,
+                        divideShape: 'clone'
+                      }
+                    }
+                  });
+                });
+
               </script>
             </div>
           </div>
@@ -282,14 +731,7 @@
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
-    <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
-    </div>
     <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
       Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
   </footer><!-- End Footer -->
